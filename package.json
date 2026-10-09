@@ -1,0 +1,19 @@
+{
+  "name": "skazki-visitki",
+  "version": "1.0.0",
+  "description": "Промо-лендинг выбора магазинов и промокода приложения Сказки",
+  "main": "script.js",
+  "scripts": {
+    "start": "live-server --port=3000 --open=/",
+    "dev": "live-server --port=3000 --open=/"
+  },
+  "keywords": [
+    "skazki",
+    "kids-story-quest"
+  ],
+  "author": "SkazkiKids",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}

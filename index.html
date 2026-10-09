@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Сказки — Добрые сказки-игры для детей</title>
+  <meta name="description" content="Интерактивные развивающие сказки для малышей от 2 до 5 лет без рекламы. Установите прямо сейчас со скидкой по промокоду KOTIK!">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Фоновый градиентный контейнер -->
+  <div class="app-viewport">
+    
+    <!-- Основное игровое окно-планшет в стиле приложения (Черничная тема) -->
+    <main class="game-window">
+      
+      <!-- Верхняя шапка планшета -->
+      <header class="window-header">
+        <div class="header-decor left">
+          <span class="icon-star">⭐</span>
+        </div>
+        <div class="header-title-wrap">
+          <h1 class="main-title">Добрые сказки-игры</h1>
+          <p class="subtitle">Развивающие истории для ваших малышей</p>
+        </div>
+        <div class="header-decor right">
+          <span class="icon-berry">🫐</span>
+        </div>
+      </header>
+
+      <!-- Основной Grid-контейнер контента -->
+      <div class="grid-container">
+        
+        <!-- Герой приложения и бейдж возраста -->
+        <section class="hero-section">
+          <div class="hero-avatar-wrap">
+            <img src="assets/images/cat.png" alt="Котёнок" class="hero-avatar">
+          </div>
+          <div class="hero-badge">
+            <span>Для детей от 2 до 5 лет</span>
+          </div>
+        </section>
+
+        <!-- Блок промокода с интерактивным копированием -->
+        <section class="promo-card">
+          <div class="promo-header">
+            <span class="gift-icon">🎁</span>
+            <div class="promo-text-wrap">
+              <span class="promo-title">2 сказки бесплатно прямо сейчас!</span>
+              <span class="promo-sub">Скидка 100 ₽ на полный сборник</span>
+            </div>
+          </div>
+          
+          <div class="promo-action">
+            <div class="coupon-box" id="couponBox">
+              <span class="coupon-label">Промокод:</span>
+              <span class="coupon-code" id="couponCode">KOTIK</span>
+            </div>
+            <button type="button" class="btn-copy" id="copyBtn" aria-label="Скопировать промокод">
+              <span class="copy-text" id="copyText">Скопировать</span>
+            </button>
+          </div>
+        </section>
+
+        <!-- Секция: 3 фирменные кнопки магазинов -->
+        <section class="stores-section">
+          <h2 class="stores-heading">Выберите удобный магазин:</h2>
+          
+          <div class="stores-grid">
+            <!-- 1. Google Play (Зелёная кнопка) -->
+            <a href="https://play.google.com/store/apps/details?id=ru.skazkikids.app" class="store-card store-google" target="_blank" rel="noopener">
+              <div class="store-icon-wrap">
+                <img src="assets/images/google-play.svg" alt="Google Play" class="store-icon">
+              </div>
+              <div class="store-details">
+                <span class="store-action">Скачать в</span>
+                <span class="store-name">Google Play</span>
+              </div>
+              <div class="store-arrow">➔</div>
+            </a>
+
+            <!-- 2. RuStore (Жёлтая кнопка) -->
+            <a href="https://www.rustore.ru/catalog/app/ru.skazkikids.app" class="store-card store-rustore" target="_blank" rel="noopener">
+              <div class="store-icon-wrap">
+                <img src="assets/images/rustore.svg" alt="RuStore" class="store-icon">
+              </div>
+              <div class="store-details">
+                <span class="store-action">Скачать в</span>
+                <span class="store-name">RuStore</span>
+                <span class="store-tag">Карты РФ • СБП</span>
+              </div>
+              <div class="store-arrow">➔</div>
+            </a>
+
+            <!-- 3. Huawei AppGallery (Персиковая кнопка) -->
+            <a href="https://appgallery.huawei.com/app/ru.skazkikids.app" class="store-card store-huawei" target="_blank" rel="noopener">
+              <div class="store-icon-wrap">
+                <img src="assets/images/appgallery.svg" alt="AppGallery" class="store-icon">
+              </div>
+              <div class="store-details">
+                <span class="store-action">Скачать в</span>
+                <span class="store-name">AppGallery</span>
+              </div>
+              <div class="store-arrow">➔</div>
+            </a>
+          </div>
+        </section>
+
+        <!-- Преимущества в 1 строку (мини-буллеты) -->
+        <section class="features-bar">
+          <div class="feature-item">
+            <span class="dot green"></span>
+            <span>0% рекламы</span>
+          </div>
+          <div class="feature-item">
+            <span class="dot yellow"></span>
+            <span>Сказкотерапия</span>
+          </div>
+          <div class="feature-item">
+            <span class="dot blue"></span>
+            <span>Запуск речи</span>
+          </div>
+          <div class="feature-item">
+            <span class="dot peach"></span>
+            <span>Без интернета</span>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- Футер с копирайтом -->
+      <footer class="window-footer">
+        <p class="copyright">© 2026 ru.skazkikids.app. Все права защищены.</p>
+      </footer>
+
+    </main>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

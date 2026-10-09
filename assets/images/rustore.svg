@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ruStoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0077FF"/>
+      <stop offset="100%" stop-color="#0055D4"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="128" fill="url(#ruStoreGrad)"/>
+  <path fill="#FFFFFF" d="M160 120h116c68 0 116 38 116 100 0 46-27 79-71 93l79 119h-66l-71-110h-47v110h-56V120zm112 150c38 0 62-20 62-52s-24-50-62-50h-56v102h56z"/>
+</svg>
