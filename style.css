@@ -57,7 +57,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
+  padding: 8px;
 }
 
 /* Оболочка */
@@ -85,28 +85,15 @@ body {
   padding: 18px 20px 14px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   text-align: center;
   border-bottom: 2px solid rgba(56, 182, 255, 0.25);
   background: rgba(255, 255, 255, 0.5);
 }
 
-.header-decor {
-  font-size: 26px;
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #FFFFFF;
-  border-radius: 50%;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
-  border: 2px solid #E1F0FD;
-}
-
 .header-title-wrap {
-  flex: 1;
-  padding: 0 10px;
+  width: 100%;
+  text-align: center;
 }
 
 .main-title {
@@ -364,17 +351,24 @@ body {
   background: #E0F2E4;
 }
 
-/* 2. RuStore (Желтая) */
+/* 2. RuStore (Фирменная синяя) */
 .store-rustore {
-  background: var(--color-yellow-bg);
-  border-color: var(--color-yellow-border);
-  color: #795548;
+  background: #EDF6FF;
+  border-color: #0077FF;
+  color: #0D47A1;
+}
+.store-rustore .store-action {
+  color: #1976D2;
 }
 .store-rustore .store-name {
   color: #0055D4;
 }
+.store-rustore .store-tag {
+  background: rgba(0, 85, 212, 0.1);
+  color: #0055D4;
+}
 .store-rustore:hover {
-  background: #FFF5CC;
+  background: #E1EFFF;
 }
 
 /* 3. Huawei AppGallery (Персиковая) */
@@ -389,22 +383,35 @@ body {
 
 /* 4. Мини-буллеты преимуществ */
 .features-bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 14px;
   background: #FFFFFF;
-  border-radius: 14px;
-  padding: 10px 14px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+  border: 1.5px solid rgba(56, 182, 255, 0.2);
+  border-radius: 16px;
+  padding: 12px 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 }
 
 .feature-item {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 11px;
+  gap: 8px;
+  font-size: 13px;
   font-weight: 700;
-  color: #455A64;
+  color: #37474F;
+  white-space: nowrap; /* Запрет переноса строк */
+}
+
+@media (min-width: 460px) {
+  .features-bar {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    padding: 12px 14px;
+  }
+  .feature-item {
+    font-size: 12px;
+  }
 }
 
 .dot {
