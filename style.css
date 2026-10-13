@@ -290,6 +290,11 @@ body {
   gap: 6px;
 }
 
+.promo-word {
+  color: #E65100;
+  font-weight: 700;
+}
+
 .promo-discount {
   color: #2E7D32;
   font-weight: 800;
