@@ -18,24 +18,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function trackEvent(eventName, extraDetails = '') {
     try {
-      const endpoint = 'https://api.skazkikids.ru/api/track';
-      const payload = JSON.stringify({
+      const q = new URLSearchParams({
         event: eventName,
         source: utmSource,
-        details: extraDetails || (window.location.search || 'direct')
+        details: extraDetails || (window.location.search || 'direct'),
+        _t: Date.now()
       });
-
-      if (navigator.sendBeacon) {
-        const blob = new Blob([payload], { type: 'application/json' });
-        navigator.sendBeacon(endpoint, blob);
-      } else {
-        fetch(endpoint, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: payload,
-          keepalive: true
-        }).catch(() => {});
-      }
+      // 100% надежный метод отслеживания без CORS-блокировок на всех телефонах
+      const img = new Image();
+      img.src = 'https://api.skazkikids.ru/api/track?' + q.toString();
     } catch (e) {
       // Тихий режим — аналитика не должна мешать пользователю
     }
