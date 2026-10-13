@@ -406,7 +406,9 @@ body {
   font-weight: 600;
   color: var(--text-main);
   line-height: 1.45;
-  text-align: left;
+  text-align: justify;
+  text-align-last: center;
+  hyphens: auto;
 }
 
 /* Футер */
