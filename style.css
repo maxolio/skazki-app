@@ -258,12 +258,64 @@ body {
   gap: 10px;
 }
 
-.stores-heading {
+.promo-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
   font-family: 'Comfortaa', cursive, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 700;
   color: var(--text-title);
   text-align: center;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  padding: 4px 6px;
+}
+
+.promo-label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.promo-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #FFF3E0;
+  border: 1.5px dashed #FF9800;
+  color: #E65100;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 6px rgba(255, 152, 0, 0.15);
+  transition: all 0.2s ease;
+}
+
+.promo-chip:hover {
+  background: #FFE0B2;
+  transform: scale(1.03);
+}
+
+.promo-chip:active {
+  transform: scale(0.96);
+}
+
+.promo-chip.copied {
+  background: #E8F5E9;
+  border-color: #4CAF50;
+  color: #2E7D32;
+  border-style: solid;
+}
+
+.promo-icon {
+  font-size: 13px;
+  opacity: 0.85;
 }
 
 .stores-grid {

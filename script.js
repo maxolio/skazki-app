@@ -38,6 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
     sessionStorage.setItem('skazki_visit_tracked', '1');
   }
 
+  const promoHeaderBar = document.getElementById('promoHeaderBar');
+  const promoChip = document.getElementById('promoChip');
+  const promoCodeText = document.getElementById('promoCodeText');
+  const promoCopyIcon = document.getElementById('promoCopyIcon');
+
   // Функция копирования в буфер обмена
   async function copyPromoCode() {
     try {
@@ -53,34 +58,42 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.removeChild(tempInput);
       }
 
-      // Фиксация события копирования промокода
+      // Фиксация события копирования промокода в аналитику
       trackEvent('copy_promo_kotik', 'Промокод KOTIK скопирован');
 
-      // Визуальный отклик
-      copyBtn.classList.add('copied');
-      copyText.textContent = 'Скопировано! ✅';
+      // Визуальный отклик на плашке над сторами
+      if (promoChip) {
+        promoChip.classList.add('copied');
+        if (promoCodeText) promoCodeText.textContent = 'Скопировано! ✅';
+        if (promoCopyIcon) promoCopyIcon.textContent = '';
+      }
+
+      if (copyBtn) {
+        copyBtn.classList.add('copied');
+        if (copyText) copyText.textContent = 'Скопировано! ✅';
+      }
 
       // Возврат через 2.5 секунды
       setTimeout(() => {
-        copyBtn.classList.remove('copied');
-        copyText.textContent = 'Скопировать';
+        if (promoChip) {
+          promoChip.classList.remove('copied');
+          if (promoCodeText) promoCodeText.textContent = 'KOTIK';
+          if (promoCopyIcon) promoCopyIcon.textContent = '📋';
+        }
+        if (copyBtn) {
+          copyBtn.classList.remove('copied');
+          if (copyText) copyText.textContent = 'Скопировать';
+        }
       }, 2500);
 
     } catch (err) {
       console.error('Ошибка копирования:', err);
-      copyText.textContent = 'Код: KOTIK';
     }
   }
 
-  // Клик по кнопке «Скопировать»
-  if (copyBtn) {
-    copyBtn.addEventListener('click', copyPromoCode);
-  }
-
-  // Клик по самой рамочке с кодом тоже копирует
-  if (couponBox) {
-    couponBox.style.cursor = 'pointer';
-    couponBox.addEventListener('click', copyPromoCode);
+  // Клик по промокод-плашке над магазинами
+  if (promoHeaderBar) {
+    promoHeaderBar.addEventListener('click', copyPromoCode);
   }
 
   // Клики по кнопкам магазинов приложений
