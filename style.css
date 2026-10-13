@@ -290,6 +290,11 @@ body {
   gap: 6px;
 }
 
+.promo-discount {
+  color: #2E7D32;
+  font-weight: 800;
+}
+
 .promo-chip {
   display: inline-flex;
   align-items: center;
