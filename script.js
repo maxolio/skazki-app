@@ -61,11 +61,10 @@ document.addEventListener('DOMContentLoaded', () => {
       // Фиксация события копирования промокода в аналитику
       trackEvent('copy_promo_kotik', 'Промокод KOTIK скопирован');
 
-      // Визуальный отклик на плашке над сторами
+      // Визуальный отклик на плашке над сторами (текст KOTIK остаётся, меняется иконка на зелёную галочку)
       if (promoChip) {
         promoChip.classList.add('copied');
-        if (promoCodeText) promoCodeText.textContent = 'Скопировано! ✅';
-        if (promoCopyIcon) promoCopyIcon.textContent = '';
+        if (promoCopyIcon) promoCopyIcon.textContent = '✅';
       }
 
       if (copyBtn) {
@@ -73,18 +72,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (copyText) copyText.textContent = 'Скопировано! ✅';
       }
 
-      // Возврат через 2.5 секунды
+      // Возврат через 2 секунды
       setTimeout(() => {
         if (promoChip) {
           promoChip.classList.remove('copied');
-          if (promoCodeText) promoCodeText.textContent = 'KOTIK';
           if (promoCopyIcon) promoCopyIcon.textContent = '📋';
         }
         if (copyBtn) {
           copyBtn.classList.remove('copied');
           if (copyText) copyText.textContent = 'Скопировать';
         }
-      }, 2500);
+      }, 2000);
 
     } catch (err) {
       console.error('Ошибка копирования:', err);
