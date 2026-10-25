@@ -128,13 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  if (isIOS) {
-    const buyCodeCard = document.getElementById('btnOpenBuyCodeModal');
-    if (buyCodeCard) {
-      buyCodeCard.style.order = '-2'; // Поднимаем покупку кода доступа на 1 место для iPhone/iPad
-    }
-  }
-
   // ==========================================================================
   // Модальное окно покупки 6-значного кода доступа через Робокассу / СБП
   // ==========================================================================

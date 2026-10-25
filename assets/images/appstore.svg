@@ -1,0 +1,16 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="appstore_grad" x1="256" y1="6" x2="256" y2="506" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#19BDFB"/>
+      <stop offset="1" stop-color="#1D6FF2"/>
+    </linearGradient>
+  </defs>
+  <path d="M41.1472 470.853C76.2945 506 132.863 506 246 506H266C379.137 506 435.705 506 470.853 470.853C506 435.705 506 379.136 506 265.999V245.999C506 132.861 506 76.2923 470.853 41.1451C435.705 5.99999 379.137 6 266 6H246C132.863 6.00001 76.2945 6.00001 41.1472 41.1451C5.99999 76.2923 6 132.861 6 245.999V265.999C6.00001 379.136 6.00001 435.706 41.1472 470.853Z" fill="url(#appstore_grad)"/>
+  <g stroke="white" stroke-width="38" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="236" y1="126" x2="296" y2="230"/>
+    <line x1="276" y1="126" x2="144" y2="356"/>
+    <line x1="122" y1="306" x2="292" y2="306"/>
+    <line x1="330" y1="288" x2="368" y2="356"/>
+    <line x1="344" y1="306" x2="390" y2="306"/>
+  </g>
+</svg>

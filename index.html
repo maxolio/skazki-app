@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
 </head>
 <body>
   <!-- Фоновый градиентный контейнер -->
@@ -71,17 +71,19 @@
           </div>
           
           <div class="stores-grid">
-            <!-- 0. Купить 6-значный код доступа (Для iOS и Android) -->
-            <button type="button" id="btnOpenBuyCodeModal" class="store-card store-buy-code">
-              <div class="store-icon-wrap store-icon-key">🔑</div>
-              <div class="store-details">
-                <span class="store-action">Для iPhone / iPad и Android</span>
-                <span class="store-name">Купить код доступа</span>
+            <!-- 1. App Store (Для iPhone и iPad — пока неактивная) -->
+            <div class="store-card store-apple store-disabled" aria-disabled="true">
+              <div class="store-icon-wrap">
+                <img src="assets/images/appstore.svg?v=1" alt="App Store" class="store-icon">
               </div>
-              <div class="store-price-pill">299 ₽ <small>с кодом</small></div>
-            </button>
+              <div class="store-details">
+                <span class="store-action">Скачать в</span>
+                <span class="store-name">App Store</span>
+              </div>
+              <div class="store-soon-badge">Скоро</div>
+            </div>
 
-            <!-- 1. Google Play (Зелёная кнопка) -->
+            <!-- 2. Google Play (Зелёная кнопка) -->
             <a href="https://play.google.com/store/apps/details?id=ru.skazkikids.app" class="store-card store-google" target="_blank" rel="noopener">
               <div class="store-icon-wrap">
                 <img src="assets/images/google-play.svg?v=2" alt="Google Play" class="store-icon">
@@ -93,7 +95,7 @@
               <div class="store-arrow">➔</div>
             </a>
 
-            <!-- 2. RuStore (Жёлтая кнопка) -->
+            <!-- 3. RuStore (Синяя кнопка) -->
             <a href="https://www.rustore.ru/catalog/app/ru.skazkikids.app" class="store-card store-rustore" target="_blank" rel="noopener">
               <div class="store-icon-wrap">
                 <img src="assets/images/rustore.svg?v=2" alt="RuStore" class="store-icon">
@@ -105,7 +107,7 @@
               <div class="store-arrow">➔</div>
             </a>
 
-            <!-- 3. Huawei AppGallery (Персиковая кнопка) -->
+            <!-- 4. Huawei AppGallery (Персиковая кнопка) -->
             <a href="https://appgallery.huawei.com/app/C119122803" class="store-card store-huawei" target="_blank" rel="noopener">
               <div class="store-icon-wrap">
                 <img src="assets/images/appgallery.svg?v=2" alt="AppGallery" class="store-icon">
@@ -117,6 +119,23 @@
               <div class="store-arrow">➔</div>
             </a>
           </div>
+
+          <!-- Разделитель секции покупки сборников (как на макете) -->
+          <div class="section-divider" aria-hidden="true">
+            <span class="section-divider-line"></span>
+            <span class="section-divider-text">· ПОКУПКА СБОРНИКОВ ·</span>
+            <span class="section-divider-line"></span>
+          </div>
+
+          <!-- Отдельная кнопка покупки сборника / получения кода доступа -->
+          <button type="button" id="btnOpenBuyCodeModal" class="store-card store-buy-code">
+            <div class="store-icon-wrap store-icon-key">🔑</div>
+            <div class="store-details">
+              <span class="store-action">Для iPhone и Android • Код доступа</span>
+              <span class="store-name">Купить сборник сказок</span>
+            </div>
+            <div class="store-price-pill">299 ₽ <small>с кодом</small></div>
+          </button>
         </section>
 
         <!-- Блок-подсказка при проблемах со скачиванием -->
@@ -185,6 +204,6 @@
     </div>
   </div>
 
-  <script src="script.js?v=5"></script>
+  <script src="script.js?v=6"></script>
 </body>
 </html>

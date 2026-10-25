@@ -417,7 +417,63 @@ body {
   font-weight: bold;
 }
 
-/* 0. Купить 6-значный код доступа (Золотисто-изумрудная карточка) */
+/* 1. App Store (Нежно-голубая / пока неактивная) */
+.store-apple {
+  background: #F0F7FF;
+  border-color: #93C5FD;
+  color: #1E3A8A;
+}
+.store-apple .store-action {
+  color: #3B82F6;
+}
+.store-apple .store-name {
+  color: #1D4ED8;
+}
+.store-disabled {
+  cursor: default;
+  opacity: 0.78;
+  user-select: none;
+}
+.store-disabled:active {
+  transform: none;
+}
+.store-soon-badge {
+  background: #DBEAFE;
+  border: 1.5px solid #93C5FD;
+  color: #1E40AF;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+/* Разделитель секции покупки сборников (как на эталонном макете) */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 4px 4px 2px;
+  user-select: none;
+}
+.section-divider-line {
+  flex: 1;
+  height: 1.5px;
+  background: rgba(120, 113, 108, 0.28);
+  border-radius: 2px;
+}
+.section-divider-text {
+  font-size: 11px;
+  font-weight: 800;
+  color: #78716C;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* Кнопка покупки сборника сказок / получения кода доступа */
 .store-buy-code {
   background: linear-gradient(135deg, #FFFDF5 0%, #FFF3CD 100%);
   border-color: #F59E0B;
