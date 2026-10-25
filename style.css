@@ -692,27 +692,57 @@ body {
 }
 
 .buy-modal-sub {
-  font-size: 13px;
-  font-weight: 600;
-  color: #546E7A;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #15803D;
   text-align: center;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.buy-steps-box {
+  background: #F0F9FF;
+  border: 1.5px solid #BAE6FD;
+  border-radius: 14px;
+  padding: 9px 11px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  text-align: left;
+}
+
+.buy-step-item {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #334155;
   line-height: 1.35;
-  margin-bottom: 14px;
+}
+
+.buy-step-item strong {
+  color: #0D47A1;
+  font-weight: 800;
+}
+
+.buy-step-item b {
+  color: #15803D;
+  font-weight: 800;
 }
 
 .buy-part-selector {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .buy-part-btn {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
   text-align: left;
-  padding: 10px 11px;
+  padding: 8px 10px;
   border-radius: 16px;
   border: 2px solid #CBD5E1;
   background: #F8FAFC;
@@ -727,12 +757,27 @@ body {
   box-shadow: 0 3px 10px rgba(22, 163, 74, 0.14);
 }
 
+.buy-part-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.12));
+}
+
+.buy-part-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
 .buy-part-title {
   font-family: 'Comfortaa', cursive, sans-serif;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 700;
   color: #0F172A;
-  margin-bottom: 3px;
+  margin-bottom: 2px;
+  line-height: 1.15;
 }
 
 .buy-part-btn.active .buy-part-title {
@@ -740,10 +785,10 @@ body {
 }
 
 .buy-part-desc {
-  font-size: 11px;
-  font-weight: 600;
+  font-size: 10.5px;
+  font-weight: 700;
   color: #64748B;
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .buy-field-group {

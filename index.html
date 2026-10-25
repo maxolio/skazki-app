@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
   <!-- Фоновый градиентный контейнер -->
@@ -164,18 +164,31 @@
   <div class="buy-modal-backdrop" id="buyCodeModal" aria-hidden="true">
     <div class="buy-modal-card" role="dialog" aria-modal="true" aria-labelledby="buyModalTitle">
       <button type="button" class="buy-modal-close" id="btnCloseBuyCodeModal" aria-label="Закрыть">✕</button>
-      <h2 class="buy-modal-title" id="buyModalTitle">🔑 Получить код доступа</h2>
-      <p class="buy-modal-sub">6-значный код появится на экране сразу после оплаты по СБП и откроет сборник навсегда</p>
+      <h2 class="buy-modal-title" id="buyModalTitle">🔑 Покупка сборника сказок</h2>
+      <p class="buy-modal-sub">Разовый платёж навсегда • Без подписок и доплат</p>
+
+      <!-- Памятка о структуре оплаты (3 шага) -->
+      <div class="buy-steps-box">
+        <div class="buy-step-item"><strong>1. Оплата по СБП:</strong> выберите сборник, укажите E-mail и оплатите <span>(с промокодом <b>KOTIK</b> — 299 ₽ вместо 399 ₽)</span>.</div>
+        <div class="buy-step-item"><strong>2. Получение кода:</strong> сразу после оплаты на этом экране появится ваш <b>6-значный код доступа</b>, а на почту придёт чек.</div>
+        <div class="buy-step-item"><strong>3. Открытие сказок:</strong> введите этот 6-значный код в приложении «Сказки» на iPhone, iPad или Android — все 16 историй откроются навсегда!</div>
+      </div>
 
       <!-- Выбор сборника -->
       <div class="buy-part-selector" id="buyPartSelector">
         <button type="button" class="buy-part-btn active" data-part="part-1">
-          <span class="buy-part-title">🌟 Сборник №1</span>
-          <span class="buy-part-desc">16 историй: Котёнок, Медвежонок, Жирафик, Енотик</span>
+          <img src="assets/images/badge-cat.webp" alt="Котёнок" class="buy-part-icon">
+          <div class="buy-part-text">
+            <span class="buy-part-title">Сборник №1</span>
+            <span class="buy-part-desc">16 историй • 4 персонажа</span>
+          </div>
         </button>
         <button type="button" class="buy-part-btn" data-part="part-2">
-          <span class="buy-part-title">❄️ Сборник №2</span>
-          <span class="buy-part-desc">16 историй: Лисёнок, Белый мишка, Оленёнок, Зайчонок</span>
+          <img src="assets/images/badge-fox.webp" alt="Лисёнок" class="buy-part-icon">
+          <div class="buy-part-text">
+            <span class="buy-part-title">Сборник №2</span>
+            <span class="buy-part-desc">16 историй • 4 персонажа</span>
+          </div>
         </button>
       </div>
 
