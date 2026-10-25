@@ -475,25 +475,26 @@ body {
 
 /* Кнопка покупки сборника сказок / получения кода доступа */
 .store-buy-code {
-  background: linear-gradient(135deg, #FFFDF5 0%, #FFF3CD 100%);
-  border-color: #F59E0B;
-  color: #92400E;
+  background: linear-gradient(135deg, #FFF0F5 0%, #FCE7F3 100%);
+  border-color: #EC4899;
+  color: #831843;
+  box-shadow: 0 4px 14px rgba(236, 72, 153, 0.16);
 }
 .store-buy-code:hover {
-  background: linear-gradient(135deg, #FFF9E6 0%, #FFE8A3 100%);
+  background: linear-gradient(135deg, #FFE8F0 0%, #FBCFE8 100%);
 }
 .store-buy-code .store-action {
-  color: #B45309;
+  color: #BE185D;
   font-weight: 700;
 }
 .store-buy-code .store-name {
-  color: #78350F;
+  color: #831843;
   font-size: 18px;
 }
 .store-icon-key {
   font-size: 28px;
-  background: #FEF3C7;
-  border: 2px solid #FCD34D;
+  background: #FFF1F5;
+  border: 2px solid #F472B6;
   border-radius: 14px;
 }
 .store-price-pill {
