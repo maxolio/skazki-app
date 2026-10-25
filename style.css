@@ -129,9 +129,9 @@ body {
 }
 
 .hero-avatar-wrap {
-  width: 130px;
-  height: 130px;
-  margin-bottom: 10px;
+  width: 112px;
+  height: 112px;
+  margin-bottom: 8px;
   filter: drop-shadow(0 6px 12px rgba(13, 71, 161, 0.15));
 }
 
@@ -341,19 +341,23 @@ body {
 .stores-grid {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 12px;
+  row-gap: 9px;
 }
 
 .store-card {
   display: flex;
   align-items: center;
-  gap: 14px;
-  padding: 12px 18px;
+  gap: 12px;
+  padding: 10px 16px;
   border-radius: var(--radius-card);
   text-decoration: none;
   border: 3px solid transparent;
   box-shadow: var(--shadow-btn);
   transition: transform 0.15s ease, box-shadow 0.2s ease;
+  width: 100%;
+  font-family: inherit;
+  text-align: left;
+  cursor: pointer;
 }
 
 .store-card:active {
@@ -411,6 +415,48 @@ body {
   font-size: 20px;
   opacity: 0.7;
   font-weight: bold;
+}
+
+/* 0. Купить 6-значный код доступа (Золотисто-изумрудная карточка) */
+.store-buy-code {
+  background: linear-gradient(135deg, #FFFDF5 0%, #FFF3CD 100%);
+  border-color: #F59E0B;
+  color: #92400E;
+}
+.store-buy-code:hover {
+  background: linear-gradient(135deg, #FFF9E6 0%, #FFE8A3 100%);
+}
+.store-buy-code .store-action {
+  color: #B45309;
+  font-weight: 700;
+}
+.store-buy-code .store-name {
+  color: #78350F;
+  font-size: 18px;
+}
+.store-icon-key {
+  font-size: 28px;
+  background: #FEF3C7;
+  border: 2px solid #FCD34D;
+  border-radius: 14px;
+}
+.store-price-pill {
+  background: #16A34A;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  text-align: center;
+  line-height: 1.1;
+  flex-shrink: 0;
+  box-shadow: 0 2px 6px rgba(22, 163, 74, 0.25);
+}
+.store-price-pill small {
+  display: block;
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.92;
 }
 
 /* 1. Google Play (Зеленая) */
@@ -509,4 +555,244 @@ body {
   .main-title {
     font-size: 20px;
   }
+  .store-buy-code .store-name {
+    font-size: 16px;
+  }
 }
+
+/* ==========================================================================
+   Модальное окно покупки 6-значного кода доступа
+   ========================================================================== */
+.buy-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(13, 39, 80, 0.6);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  z-index: 1000;
+}
+
+.buy-modal-backdrop.open {
+  display: flex;
+}
+
+.buy-modal-card {
+  position: relative;
+  width: 100%;
+  max-width: 440px;
+  background: #FFFFFF;
+  border: 3px solid #38B6FF;
+  border-radius: 26px;
+  padding: 22px 18px 20px;
+  box-shadow: 0 20px 50px rgba(13, 71, 161, 0.25);
+  animation: modalPopIn 0.2s ease-out;
+}
+
+@keyframes modalPopIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.buy-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: none;
+  background: #F1F5F9;
+  color: #475569;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.buy-modal-close:active {
+  transform: scale(0.92);
+}
+
+.buy-modal-title {
+  font-family: 'Comfortaa', cursive, sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #0D47A1;
+  text-align: center;
+  margin-bottom: 6px;
+  padding-right: 20px;
+}
+
+.buy-modal-sub {
+  font-size: 13px;
+  font-weight: 600;
+  color: #546E7A;
+  text-align: center;
+  line-height: 1.35;
+  margin-bottom: 14px;
+}
+
+.buy-part-selector {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.buy-part-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 10px 11px;
+  border-radius: 16px;
+  border: 2px solid #CBD5E1;
+  background: #F8FAFC;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+
+.buy-part-btn.active {
+  border-color: #16A34A;
+  background: #F0FDF4;
+  box-shadow: 0 3px 10px rgba(22, 163, 74, 0.14);
+}
+
+.buy-part-title {
+  font-family: 'Comfortaa', cursive, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0F172A;
+  margin-bottom: 3px;
+}
+
+.buy-part-btn.active .buy-part-title {
+  color: #15803D;
+}
+
+.buy-part-desc {
+  font-size: 11px;
+  font-weight: 600;
+  color: #64748B;
+  line-height: 1.25;
+}
+
+.buy-field-group {
+  margin-bottom: 12px;
+}
+
+.buy-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #334155;
+  margin-bottom: 5px;
+}
+
+.buy-input {
+  width: 100%;
+  padding: 11px 13px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0F172A;
+  background: #F8FAFC;
+  border: 2px solid #CBD5E1;
+  border-radius: 13px;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.buy-input:focus {
+  border-color: #38B6FF;
+  background: #FFFFFF;
+}
+
+.buy-promo-row {
+  display: flex;
+  gap: 8px;
+}
+
+.buy-promo-input {
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.buy-promo-apply-btn {
+  padding: 0 15px;
+  border-radius: 13px;
+  border: 2px solid #16A34A;
+  background: #DCFCE7;
+  color: #166534;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.buy-promo-apply-btn:active {
+  transform: scale(0.96);
+}
+
+.buy-promo-status {
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 5px;
+  min-height: 16px;
+}
+
+.buy-promo-status.ok {
+  color: #15803D;
+}
+
+.buy-promo-status.err {
+  color: #DC2626;
+}
+
+.buy-error-msg {
+  font-size: 13px;
+  font-weight: 700;
+  color: #DC2626;
+  text-align: center;
+  margin-bottom: 8px;
+  min-height: 18px;
+}
+
+.buy-submit-btn {
+  width: 100%;
+  padding: 14px 18px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
+  color: #FFFFFF;
+  font-family: 'Comfortaa', cursive, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(22, 163, 74, 0.3);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.buy-submit-btn:active {
+  transform: scale(0.98);
+}
+
+.buy-submit-btn:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+

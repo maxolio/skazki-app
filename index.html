@@ -33,7 +33,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600;700&family=Nunito:wght@500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=5">
 </head>
 <body>
   <!-- Фоновый градиентный контейнер -->
@@ -71,6 +71,16 @@
           </div>
           
           <div class="stores-grid">
+            <!-- 0. Купить 6-значный код доступа (Для iOS и Android) -->
+            <button type="button" id="btnOpenBuyCodeModal" class="store-card store-buy-code">
+              <div class="store-icon-wrap store-icon-key">🔑</div>
+              <div class="store-details">
+                <span class="store-action">Для iPhone / iPad и Android</span>
+                <span class="store-name">Купить код доступа</span>
+              </div>
+              <div class="store-price-pill">299 ₽ <small>с кодом</small></div>
+            </button>
+
             <!-- 1. Google Play (Зелёная кнопка) -->
             <a href="https://play.google.com/store/apps/details?id=ru.skazkikids.app" class="store-card store-google" target="_blank" rel="noopener">
               <div class="store-icon-wrap">
@@ -131,6 +141,50 @@
 
   </div>
 
-  <script src="script.js?v=4"></script>
+  <!-- Модальное окно покупки 6-значного кода доступа -->
+  <div class="buy-modal-backdrop" id="buyCodeModal" aria-hidden="true">
+    <div class="buy-modal-card" role="dialog" aria-modal="true" aria-labelledby="buyModalTitle">
+      <button type="button" class="buy-modal-close" id="btnCloseBuyCodeModal" aria-label="Закрыть">✕</button>
+      <h2 class="buy-modal-title" id="buyModalTitle">🔑 Получить код доступа</h2>
+      <p class="buy-modal-sub">6-значный код появится на экране сразу после оплаты по СБП и откроет сборник навсегда</p>
+
+      <!-- Выбор сборника -->
+      <div class="buy-part-selector" id="buyPartSelector">
+        <button type="button" class="buy-part-btn active" data-part="part-1">
+          <span class="buy-part-title">🌟 Сборник №1</span>
+          <span class="buy-part-desc">16 историй: Котёнок, Медвежонок, Жирафик, Енотик</span>
+        </button>
+        <button type="button" class="buy-part-btn" data-part="part-2">
+          <span class="buy-part-title">❄️ Сборник №2</span>
+          <span class="buy-part-desc">16 историй: Лисёнок, Белый мишка, Оленёнок, Зайчонок</span>
+        </button>
+      </div>
+
+      <!-- Поле Email -->
+      <div class="buy-field-group">
+        <label class="buy-label" for="buyEmailInput">Ваш E-mail (для чека и сохранения кода):</label>
+        <input type="email" id="buyEmailInput" class="buy-input" placeholder="example@mail.ru" autocomplete="email" inputmode="email">
+      </div>
+
+      <!-- Поле Промокода -->
+      <div class="buy-field-group">
+        <label class="buy-label" for="buyPromoInput">Промокод на скидку:</label>
+        <div class="buy-promo-row">
+          <input type="text" id="buyPromoInput" class="buy-input buy-promo-input" placeholder="Например: KOTIK" autocomplete="off">
+          <button type="button" id="btnApplyWebPromo" class="buy-promo-apply-btn">Применить</button>
+        </div>
+        <div class="buy-promo-status" id="buyPromoStatus"></div>
+      </div>
+
+      <div class="buy-error-msg" id="buyErrorMsg"></div>
+
+      <!-- Кнопка оплаты -->
+      <button type="button" id="btnSubmitWebPay" class="buy-submit-btn">
+        Оплатить по СБП — <span id="buySubmitPrice">399 ₽</span>
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js?v=5"></script>
 </body>
 </html>
