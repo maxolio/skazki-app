@@ -450,12 +450,12 @@ body {
   flex-shrink: 0;
 }
 
-/* Разделитель секции покупки сборников (как на эталонном макете) */
+/* Разделители секций (с увеличенным отступом сверху для группировки) */
 .section-divider {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin: 4px 4px 2px;
+  margin: 11px 4px 1px;
   user-select: none;
 }
 .section-divider-line {
