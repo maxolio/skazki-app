@@ -116,6 +116,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Клики по кнопкам поддержки и соцсетей
+  const btnSupportTg = document.getElementById('btnSupportTg');
+  if (btnSupportTg) {
+    btnSupportTg.addEventListener('click', () => {
+      trackEvent('click_telegram', 'Переход в Telegram-канал');
+    });
+  }
+
+  const btnSupportVk = document.getElementById('btnSupportVk');
+  if (btnSupportVk) {
+    btnSupportVk.addEventListener('click', () => {
+      trackEvent('click_vk', 'Переход в группу ВКонтакте');
+    });
+  }
+
+  const btnSupportMail = document.getElementById('btnSupportMail');
+  if (btnSupportMail) {
+    btnSupportMail.addEventListener('click', () => {
+      trackEvent('click_support_email', 'Клик по почте поддержки');
+    });
+  }
+
   // Анализ устройства (Huawei, iPhone/iPad, Android и т.д.) для удобства пользователя
   const userAgent = navigator.userAgent.toLowerCase();
   const isHuawei = userAgent.includes('huawei') || userAgent.includes('honor');
