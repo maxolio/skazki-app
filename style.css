@@ -129,8 +129,8 @@ body {
 }
 
 .hero-avatar-wrap {
-  width: 146px;
-  height: 146px;
+  width: 180px;
+  height: 180px;
   margin-bottom: 8px;
   filter: drop-shadow(0 6px 12px rgba(13, 71, 161, 0.15));
 }
@@ -224,7 +224,7 @@ body {
   background: #F8FAFC;
   border: 1px solid #E2E8F0;
   border-radius: 14px;
-  padding: 7px 10px;
+  padding: 6px 6px;
   text-align: left;
   transition: transform 0.15s ease, background 0.15s ease;
 }
