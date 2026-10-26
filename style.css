@@ -458,7 +458,7 @@ body {
 .stores-grid {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 14px;
+  row-gap: 22px;
 }
 
 .store-card {
