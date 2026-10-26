@@ -223,6 +223,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function openBuyModal() {
     if (!buyCodeModal) return;
+    document.body.classList.add('modal-open');
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
     buyCodeModal.classList.add('open');
     buyCodeModal.setAttribute('aria-hidden', 'false');
     if (buyErrorMsg) buyErrorMsg.textContent = '';
@@ -232,6 +235,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function closeBuyModal() {
     if (!buyCodeModal) return;
+    document.body.classList.remove('modal-open');
+    document.body.style.overflow = '';
+    document.documentElement.style.overflow = '';
     buyCodeModal.classList.remove('open');
     buyCodeModal.setAttribute('aria-hidden', 'true');
   }
@@ -248,7 +254,20 @@ document.addEventListener('DOMContentLoaded', () => {
     buyCodeModal.addEventListener('click', (e) => {
       if (e.target === buyCodeModal) closeBuyModal();
     });
+    // Блокируем свайп фона на мобильных устройствах при касании затемнения
+    buyCodeModal.addEventListener('touchmove', (e) => {
+      if (e.target === buyCodeModal) {
+        e.preventDefault();
+      }
+    }, { passive: false });
   }
+
+  // Закрытие по Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && buyCodeModal && buyCodeModal.classList.contains('open')) {
+      closeBuyModal();
+    }
+  });
 
   // При клике на плашку промокода KOTIK на главном экране также подставляем его в окно покупки
   if (promoHeaderBar && buyPromoInput) {
