@@ -1036,14 +1036,20 @@ body {
 .buy-promo-apply-btn {
   padding: 0 15px;
   border-radius: 13px;
-  border: 2px solid #16A34A;
-  background: #DCFCE7;
-  color: #166534;
+  border: 2px solid #EC4899;
+  background: linear-gradient(135deg, #FFF0F5 0%, #FCE7F3 100%);
+  color: #BE185D;
   font-family: inherit;
   font-size: 13px;
   font-weight: 800;
   cursor: pointer;
   white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.buy-promo-apply-btn:hover {
+  background: linear-gradient(135deg, #FFE8F0 0%, #FBCFE8 100%);
+  border-color: #DB2777;
 }
 
 .buy-promo-apply-btn:active {
