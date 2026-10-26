@@ -159,7 +159,7 @@ body {
   background: #FFFFFF;
   border: 1.5px solid rgba(56, 182, 255, 0.5);
   border-radius: var(--radius-card);
-  padding: 16px 10px 14px;
+  padding: 16px 6px 14px;
   box-shadow: 0 4px 16px rgba(13, 71, 161, 0.07);
   text-align: center;
   box-sizing: border-box;
@@ -204,7 +204,7 @@ body {
   font-family: 'Comfortaa', cursive, sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #E65100;
+  color: #2E7D32;
   margin: 16px 0 8px;
   border-top: 1px dashed #CBD5E1;
   padding-top: 10px;
@@ -408,7 +408,7 @@ body {
 }
 
 .promo-word {
-  color: #E65100;
+  color: #2E7D32;
   font-weight: 700;
 }
 
@@ -706,7 +706,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6px;
+  gap: 10px;
 }
 
 .support-pill {
