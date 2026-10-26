@@ -458,7 +458,7 @@ body {
 .stores-grid {
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 9px;
+  row-gap: 14px;
 }
 
 .store-card {
@@ -609,10 +609,18 @@ body {
   font-size: 18px;
 }
 .store-icon-key {
-  font-size: 28px;
   background: #FFF1F5;
   border: 2px solid #F472B6;
-  border-radius: 14px;
+  border-radius: 50%;
+  padding: 0;
+  overflow: hidden;
+}
+.store-icon-key-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
 }
 .store-price-pill {
   background: #16A34A;
