@@ -159,7 +159,7 @@ body {
   background: #FFFFFF;
   border: 1.5px solid rgba(56, 182, 255, 0.5);
   border-radius: var(--radius-card);
-  padding: 16px 14px 14px;
+  padding: 16px 10px 14px;
   box-shadow: 0 4px 16px rgba(13, 71, 161, 0.07);
   text-align: center;
   box-sizing: border-box;
@@ -168,15 +168,15 @@ body {
 
 .welcome-title {
   font-family: 'Comfortaa', cursive, sans-serif;
-  font-size: 15.5px;
+  font-size: 16px;
   font-weight: 700;
-  color: #78350F;
+  color: #E65100;
   margin: 0 0 8px;
   line-height: 1.35;
 }
 
 .welcome-intro {
-  font-size: 12.5px;
+  font-size: 14px;
   font-weight: 600;
   color: #1E293B;
   margin: 0 0 6px;
@@ -189,7 +189,7 @@ body {
 }
 
 .welcome-desc {
-  font-size: 11.5px;
+  font-size: 14px;
   color: #475569;
   line-height: 1.45;
   margin: 0 0 10px;
@@ -202,10 +202,10 @@ body {
 
 .welcome-heroes-title {
   font-family: 'Comfortaa', cursive, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 700;
-  color: #78350F;
-  margin: 8px 0 8px;
+  color: #E65100;
+  margin: 10px 0 8px;
   border-top: 1px dashed #CBD5E1;
   padding-top: 10px;
 }
@@ -224,7 +224,7 @@ body {
   background: #F8FAFC;
   border: 1px solid #E2E8F0;
   border-radius: 14px;
-  padding: 6px 10px;
+  padding: 7px 10px;
   text-align: left;
   transition: transform 0.15s ease, background 0.15s ease;
 }
@@ -240,7 +240,7 @@ body {
 }
 
 .welcome-hero-info {
-  font-size: 11px;
+  font-size: 14px;
   line-height: 1.35;
   color: #334155;
   flex: 1;
@@ -248,8 +248,8 @@ body {
 
 .welcome-hero-info strong {
   font-family: 'Comfortaa', cursive, sans-serif;
-  font-size: 11.5px;
-  color: #78350F;
+  font-size: 14px;
+  color: #E65100;
   font-weight: 700;
 }
 
@@ -257,8 +257,8 @@ body {
   background: #ECFDF5;
   border: 1.5px dashed #10B981;
   border-radius: 13px;
-  padding: 8px 10px;
-  font-size: 11.5px;
+  padding: 10px 10px;
+  font-size: 14px;
   font-weight: 600;
   color: #065F46;
   text-align: center;
