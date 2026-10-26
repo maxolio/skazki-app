@@ -470,7 +470,7 @@ body {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 14px 14px;
+  padding: 22px 14px;
   border-radius: var(--radius-card);
   text-decoration: none;
   border: 3px solid transparent;
