@@ -425,22 +425,23 @@ body {
 .promo-chip {
   display: inline-flex;
   align-items: center;
-  gap: 5px;
-  background: #FFF3E0;
-  border: 1.5px dashed #FF9800;
-  color: #E65100;
-  padding: 3px 10px;
+  justify-content: center;
+  background: linear-gradient(135deg, #FFF0F5 0%, #FCE7F3 100%);
+  border: 1.5px dashed #EC4899;
+  color: #BE185D;
+  padding: 3px 12px;
   border-radius: 12px;
   font-family: 'Nunito', sans-serif;
   font-weight: 800;
   font-size: 14px;
   letter-spacing: 0.5px;
-  box-shadow: 0 2px 6px rgba(255, 152, 0, 0.15);
+  box-shadow: 0 2px 8px rgba(236, 72, 153, 0.18);
   transition: all 0.2s ease;
 }
 
 .promo-chip:hover {
-  background: #FFE0B2;
+  background: linear-gradient(135deg, #FFE8F0 0%, #FBCFE8 100%);
+  border-color: #DB2777;
   transform: scale(1.03);
 }
 
@@ -752,9 +753,13 @@ body {
 }
 
 .support-pill-mail {
-  background: #FFF7ED;
-  border-color: #FDBA74;
-  color: #C2410C;
+  background: #F0FDF4;
+  border-color: #86EFAC;
+  color: #15803D;
+}
+.support-pill-mail:hover {
+  background: #DCFCE7;
+  border-color: #4ADE80;
 }
 
 .support-vpn-hint {
