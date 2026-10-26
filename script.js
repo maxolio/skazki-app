@@ -298,7 +298,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       btnSubmitWebPay.disabled = true;
       const originalHtml = btnSubmitWebPay.innerHTML;
-      btnSubmitWebPay.textContent = 'Переход к СБП...';
+      btnSubmitWebPay.textContent = 'Переход к оплате...';
 
       try {
         trackEvent('web_checkout_start', `${selectedPartId}:${appliedPromoCode || 'full'}`);
