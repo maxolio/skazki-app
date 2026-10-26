@@ -259,19 +259,20 @@ body {
 }
 
 .welcome-callout {
-  background: #ECFDF5;
-  border: 1.5px dashed #10B981;
+  background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+  border: 1.5px dashed #CBD5E1;
   border-radius: 13px;
   padding: 10px 10px;
   font-size: 14px;
   font-weight: 600;
-  color: #065F46;
+  color: #475569;
   text-align: center;
   line-height: 1.35;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.04);
 }
 
 .welcome-callout strong {
-  color: #047857;
+  color: #1E293B;
   font-weight: 800;
 }
 
